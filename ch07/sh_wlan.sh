@@ -11,7 +11,7 @@
 #* 
 #**************************************************************************/ 
 
-source get_gateway.sh
+source /mnt/e/mybash/bashcookbook-examples/ch07/get_gateway.sh
 get_phone_ip()
 {
 	#scan_ip_zone="192.168.3.1/24"
