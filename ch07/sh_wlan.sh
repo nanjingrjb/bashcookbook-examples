@@ -15,10 +15,8 @@ source get_gateway.sh
 get_phone_ip()
 {
 	#scan_ip_zone="192.168.3.1/24"
-	set -x
 	scan_ip_zone="$(get_gateway)/24"
 	ip=$(nmap -sP $scan_ip_zone|gawk '/Nmap scan report for/{print $NF}')
-	set +x
 	for i in ${ip[*]}
 	do
 		{
