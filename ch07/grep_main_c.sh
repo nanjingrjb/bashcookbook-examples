@@ -30,3 +30,5 @@ echo "xargs -I {} cmd {}可以逐一对列表输入进行处理，如果需要�
 echo -e "123\n234\n456"|xargs -I {} bash cecho.sh -start1 -start2 {}\
 	-end1 -end2
 
+echo "一种更简洁的做法，就是灵活理解\{\}，命令如下:echo -e \"123\n234\n456\"|xargs -I {} echo \"-start {} -end #"
+echo -e "123\n234\n456"|xargs -I {} echo "-start {} -end #"
