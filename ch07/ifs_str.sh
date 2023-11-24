@@ -24,4 +24,10 @@
         let count++
 	    done
     IFS=$oldIFS
-    echo "$user's shell is $shell"
+echo "$user's shell is $shell"
+
+echo "using gawk parse: "
+usr=$(echo $line|gawk -F: '{print $1}')
+shll=$(echo $line|gawk -F: '{print $7}')
+
+echo "$usr's shell is $shll"
