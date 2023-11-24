@@ -31,3 +31,8 @@ usr=$(echo $line|gawk -F: '{print $1}')
 shll=$(echo $line|gawk -F: '{print $7}')
 
 echo "$usr's shell is $shll"
+
+gawk -F: '
+{
+	print "usr="$1 "\tshell="$7 
+}' /etc/passwd
