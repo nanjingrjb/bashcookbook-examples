@@ -14,4 +14,19 @@
 
 
 ls ~/vsftpd-3.0.5/*.c|xargs grep -n "\<main\>"
+echo "xargs 可将多行转为单行输出，如:cat ls.txt|xargs"
+cat ls.txt|xargs
+echo "xargs 可将多行转为指定行数输出，如:cat ls.txt|xargs -n 26"
+cat ls.txt|xargs -n 33
+
+
+echo "xargs -I {} cmd {}可以逐一对列表输入进行处理，如果需要对输入加入#\
+	,命令如下：echo -e \"echo -e 123\n234 |xargs -I {} bash cecho.sh {}\""
+
+echo -e "123\n234\n456"|xargs -I {} bash cecho.sh {}
+echo "xargs -I {} cmd {}可以逐一对列表输入进行处理，如果需要对输入加入#\
+	,并且在指令前添加其他命令参数，命令如下：echo -e \"echo -e 123\n234 |xargs -I {} bash cecho.sh -m  {} -over\""
+
+echo -e "123\n234\n456"|xargs -I {} bash cecho.sh -start1 -start2 {}\
+	-end1 -end2
 
