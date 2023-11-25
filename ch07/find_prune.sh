@@ -14,5 +14,5 @@
 
 cd ..
 #排除.git文件夹，显示正常文件
-find . -name '.git' -prune -o -type f
+find . -name '.git' -prune  -name '*.sh$' -ctime -2 -o -type f
 
