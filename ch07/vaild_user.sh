@@ -49,12 +49,13 @@ in_path()
 			echo "$cmd not exeuse."
 		fi
 	else
-		path=$(echo $PATH|gawk -F: \
+		path1=$(echo $PATH|gawk -F: \
 			'{
 		      for(i=1;i<=NF;i++)
 				  print $i;
 			  }')
-		for i in $path
+		path2=$(echo $PATH|xargs -d :)
+		for i in $path2
 		      do
 		   	  if [ -e $i/$cmd ]
 			  then 
