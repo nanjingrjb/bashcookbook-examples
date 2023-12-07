@@ -1,0 +1,8 @@
+spawn bash update_svn_220.sh
+expect "Password*"
+send "scusky111111\n"
+
+expect "Password*"
+send "scusky111111\n"
+
+interact
