@@ -22,3 +22,11 @@ echo "using [[ \$a =~ ^[s-z].*[[:digit:]] ]]"
 echo "using grep:"
 echo $a|grep -E '^[s-z].*[[:digit:]]{4,}' \
 &&echo match||echo no match
+
+
+echo "注意字符串#?或%?的用法，用于删除最左边或最右边的字符"
+echo "using \${a#?} 删除最左边的第一个字符："
+echo "${a#?}"
+echo "using \${a%??} 删除最右边的2个字符："
+echo "${a%??}"
+
